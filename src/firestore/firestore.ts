@@ -11,8 +11,17 @@ import {
     FieldPath,
     Query as FirestoreQuery,
 } from "firebase-admin/firestore"
-import { Database } from "./database"
-import { Create, CreateMany, Identifiable, Query, Update, UpdateMany, Upsert, Where } from "./types"
+import { Database } from "../database"
+import {
+    Create,
+    CreateMany,
+    Identifiable,
+    Query,
+    Update,
+    UpdateMany,
+    Upsert,
+    Where,
+} from "../types"
 
 class GenericConverter<T> implements FirestoreDataConverter<T> {
     public toFirestore(data: T): DocumentData {

@@ -1,6 +1,6 @@
 import * as admin from "firebase-admin"
 import { beforeEach, describe, expect, test } from "vitest"
-import { createCollection } from "../src/firestore"
+import { createCollection } from "./firestore"
 
 // First set up unique project id for these tests, so that any other test files run in parallel
 // is not collapsing with this one.

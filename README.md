@@ -18,11 +18,16 @@ pnpm install holocron-db
 ## Usage
 
 ```typescript
+import * as admin from "firebase-admin"
 import { createCollection } from "holocron-db/firestore"
 
+admin.initializeApp({ projectId: "new-twitter" })
+
+const firestore = admin.firestore()
+
 const db = {
-    users: createCollection("users"),
-    posts: createCollection("posts"),
+    users: createCollection("users", firestore),
+    posts: createCollection("posts", firestore),
 }
 
 let allUsers = await db.users.findMany()

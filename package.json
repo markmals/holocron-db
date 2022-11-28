@@ -20,10 +20,11 @@
             "import": "./dist/index.mjs"
         },
         "./firestore": {
-            "types": "./dist/firestore.d.ts",
-            "import": "./dist/firestore.mjs"
+            "types": "./dist/firestore/index.d.ts",
+            "import": "./dist/firestore/index.mjs"
         }
     },
+    "main": "./dist/index.mjs",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
     "files": [
