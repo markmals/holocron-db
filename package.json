@@ -35,7 +35,7 @@
         "test": "(npm run dev &) && vitest run",
         "test:dev": "(npm run dev &) && vitest dev",
         "prepack": "unbuild",
-        "release": "npm run build && np"
+        "release": "npm run build && np --yolo"
     },
     "peerDependencies": {
         "firebase-admin": "^11.3.0"
