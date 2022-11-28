@@ -1,8 +1,16 @@
 {
-    "name": "package-name",
+    "name": "holocron-db",
     "version": "0.0.0",
-    "description": "",
-    "repository": "markmals/package-name",
+    "description": "A document-based database ORM for TypeScript",
+    "keywords": [
+        "firebase",
+        "firestore",
+        "database",
+        "orm",
+        "typescript",
+        "prisma"
+    ],
+    "repository": "markmals/holocron-db",
     "license": "MIT",
     "sideEffects": false,
     "type": "module",
@@ -10,6 +18,10 @@
         ".": {
             "types": "./dist/index.d.ts",
             "import": "./dist/index.mjs"
+        },
+        "./firestore": {
+            "types": "./dist/firestore.d.ts",
+            "import": "./dist/firestore.mjs"
         }
     },
     "module": "./dist/index.mjs",
@@ -19,17 +31,23 @@
     ],
     "scripts": {
         "build": "unbuild",
-        "dev": "vitest dev",
-        "test": "vitest run",
+        "dev": "firebase emulators:start --only firestore",
+        "test": "(npm run dev &) && vitest run",
+        "test:dev": "(npm run dev &) && vitest dev",
         "prepack": "unbuild",
         "release": "npm run build && np"
     },
+    "peerDependencies": {
+        "firebase-admin": "^11.3.0"
+    },
     "devDependencies": {
+        "firebase-admin": "^11.3.0",
+        "firebase-tools": "^11.16.1",
+        "np": "latest",
+        "prettier": "latest",
         "typescript": "latest",
         "unbuild": "latest",
-        "vitest": "latest",
-        "np": "latest",
-        "prettier": "latest"
+        "vitest": "latest"
     },
     "prettier": {
         "printWidth": 100,

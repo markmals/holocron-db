@@ -2,3 +2,5 @@
 node_modules
 dist
 types
+firebase-debug.log
+firestore-debug.log
