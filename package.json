@@ -17,14 +17,15 @@
     "exports": {
         ".": {
             "types": "./dist/index.d.ts",
-            "import": "./dist/index.mjs"
+            "import": "./dist/index.mjs",
+            "default": "./dist/index.mjs"
         },
         "./firestore": {
             "types": "./dist/firestore/index.d.ts",
-            "import": "./dist/firestore/index.mjs"
+            "import": "./dist/firestore/index.mjs",
+            "default": "./dist/firestore/index.mjs"
         }
     },
-    "main": "./dist/index.mjs",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
     "files": [
