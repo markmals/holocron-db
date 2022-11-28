@@ -18,14 +18,22 @@
         ".": {
             "types": "./dist/index.d.ts",
             "import": "./dist/index.mjs",
-            "default": "./dist/index.mjs"
+            "require": "./dist/index.cjs"
         },
         "./firestore": {
             "types": "./dist/firestore/index.d.ts",
             "import": "./dist/firestore/index.mjs",
-            "default": "./dist/firestore/index.mjs"
+            "require": "./dist/firestore/index.cjs"
         }
     },
+    "typesVersions": {
+        "*": {
+            "firestore": [
+                "./dist/firestore/index.d.ts"
+            ]
+        }
+    },
+    "main": "./dist/index.cjs",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
     "files": [
